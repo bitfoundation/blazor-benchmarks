@@ -1,0 +1,36 @@
+﻿@page "/"
+
+<div class="container">
+    <MudButton Variant="Variant.Filled" OnClick="IncreaseCounter">@($"Counter: {counter}")</MudButton>
+
+    <MudDatePicker Style="max-width: 350px"
+                    AriaLabel="Select a date"
+                    Placeholder="Select a date..." />
+
+    <MudProgressLinear Label="Progress"
+                       Value="30"
+                       Description="Example progress"
+                       BarHeight="20" />
+
+    <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete"></MudIconButton>
+
+    <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int counter;
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+}
