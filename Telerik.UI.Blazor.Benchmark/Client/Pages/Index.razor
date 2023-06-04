@@ -1,0 +1,69 @@
+﻿@page "/"
+
+<div class="container">
+    <TelerikButton OnClick="IncreaseCounter" ThemeColor="primary">@($"Counter: {counter}")</TelerikButton>
+        <div class="checkbox-container">
+            <TelerikCheckBox Enabled="true"
+            @bind-Value="isCheckBoxChecked"
+                             Id="Chcek1">
+            </TelerikCheckBox>
+            <label for="Chcek1" style="margin-left: 1rem;">
+                @(isCheckBoxChecked ? "Chceked" : "Not Checked")
+        </label>
+    </div>
+    <div class="demo-section k-form k-form-md k-form-vertical">
+        <div class="k-form-field">
+            <label for="travel-date" class="k-label k-form-label">Travel Date</label>
+            <div class="k-form-field-wrap">
+                <TelerikDatePicker @bind-Value="@SelectedDate"
+                                   Min="@Min"
+                                   Max="@Max"
+                                   DebounceDelay="@DebounceDelay"
+                                   ShowWeekNumbers="true"
+                                   Id="travel-date">
+                </TelerikDatePicker>
+            </div>
+        </div>
+        <div class="k-form-field">
+            <p>The selected travel date is: <strong>@SelectedDate?.ToLongDateString()</strong></p>
+        </div>
+    </div>
+    <TelerikProgressBar Value="50">
+    </TelerikProgressBar>
+    <div class="k-form-field">
+        <TelerikFloatingLabel Text="First Name*:" Class="custom-label">
+            <div class="k-form-field-wrap">
+                <TelerikTextBox @bind-Value="textBoxInputValue"></TelerikTextBox>
+            </div>
+        </TelerikFloatingLabel>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-content: start;
+    }
+</style>
+
+@code {
+    int counter;
+    bool isCheckBoxChecked;
+    DateTime? SelectedDate { get; set; }
+    DateTime Max = new DateTime(2050, 12, 31);
+    DateTime Min = new DateTime(1950, 1, 1);
+    int DebounceDelay { get; set; } = 200;
+    string textBoxInputValue;
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+}

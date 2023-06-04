@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazor.Benchmark.Client"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazor.Benchmark.Server", "MudBlazor.Benchmark\Server\MudBlazor.Benchmark.Server.csproj", "{7D39462B-DC6B-4E2E-BF08-1684CF110F79}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik.UI.for.Blazor.Benchmark", "Telerik.UI.for.Blazor.Benchmark", "{1191A3D5-1D15-48B6-BA01-2ABF310B1D19}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik.UI.for.Blazor.Benchmark", "Telerik.UI.Blazor.Benchmark", "{1191A3D5-1D15-48B6-BA01-2ABF310B1D19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.UI.for.Blazor.Benchmark.Client", "Telerik.UI.for.Blazor.Benchmark\Client\Telerik.UI.for.Blazor.Benchmark.Client.csproj", "{5A2642DD-E0D9-42FD-97FE-7373D088094C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telerik.UI.Blazor.Benchmark.Client", "Telerik.UI.Blazor.Benchmark\Client\Telerik.UI.Blazor.Benchmark.Client.csproj", "{5A2642DD-E0D9-42FD-97FE-7373D088094C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.UI.for.Blazor.Benchmark.Server", "Telerik.UI.for.Blazor.Benchmark\Server\Telerik.UI.for.Blazor.Benchmark.Server.csproj", "{4B2567B7-A124-489E-9D00-E996C22BAC71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telerik.UI.Blazor.Benchmark.Server", "Telerik.UI.Blazor.Benchmark\Server\Telerik.UI.Blazor.Benchmark.Server.csproj", "{4B2567B7-A124-489E-9D00-E996C22BAC71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

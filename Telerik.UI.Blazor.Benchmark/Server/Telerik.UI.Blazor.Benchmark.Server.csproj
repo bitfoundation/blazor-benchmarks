@@ -4,7 +4,6 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Bit.BlazorUI.Benchmark.Server</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\Telerik.UI.for.Blazor.Benchmark.Client.csproj" />
+    <ProjectReference Include="..\Client\Telerik.UI.Blazor.Benchmark.Client.csproj" />
   </ItemGroup>
 
 </Project>

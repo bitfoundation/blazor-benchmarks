@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Bit.BlazorUI.Benchmark.Client": {
+    "Telerik.UI.for.Blazor.Benchmark": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
