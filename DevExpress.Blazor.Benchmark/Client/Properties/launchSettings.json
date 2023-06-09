@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Bit.BlazorUI.Benchmark.Client": {
+    "DevExpress.Blazor.Benchmark.Client": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
