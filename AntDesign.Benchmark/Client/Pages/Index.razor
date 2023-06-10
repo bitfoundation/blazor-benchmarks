@@ -1,0 +1,41 @@
+﻿@page "/"
+
+<div class="container">
+    <Button OnClick="IncreaseCounter" Type="primary">@($"Counter: {counter}")</Button>
+
+    <Checkbox @bind-Checked="checkBoxIsChecked" Disabled="@checkBoxDisabled">
+            @($"{(checkBoxIsChecked ? "Check" : "Uncheck")}-{(checkBoxDisabled ? "Disable" : "Enable")}")
+    </Checkbox>
+
+    <DatePicker TValue="DateTime?" Picker="@DatePickerType.Date" />
+
+    <div>
+        <Input Placeholder="Simple Input" @bind-Value="@inputValue" />
+        <br />
+        <br />
+        <Text>@inputValue</Text>
+    </div>
+
+    <Progress Percent=50 Status="@ProgressStatus.Active" />
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int counter;
+    bool checkBoxIsChecked = true;
+    bool checkBoxDisabled = false;
+    string inputValue { get; set; }
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+}
