@@ -1,0 +1,51 @@
+﻿@page "/"
+
+<div class="container">
+	<RadzenButton Click="@IncreaseCounter" Text="@($"Counter: {counter}")"></RadzenButton>
+
+   <div class="rz-p-12 rz-text-align-center">
+       <RadzenCheckBox @bind-Value=@checkBoxValue Name="CheckBox1" />
+       <RadzenLabel Text="Accept?" Component="CheckBox1" Style="margin-left: 8px; vertical-align: middle;" />
+   </div>
+
+    <div class="rz-p-12 rz-text-align-center">
+        <RadzenDatePicker @bind-Value=@datePickerValue />
+    </div>
+
+    <RadzenColorPicker @bind-Value=@color ShowHSV=@colorPickerShowHSV ShowRGBA=@colorPickerShowRGBA ShowColors=@colorPickerShowColors ShowButton=@colorPickerShowButton Change=@ColorPickerOnChange />
+
+    <div class="rz-m-12">
+        <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+    </div>
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int counter;
+	DateTime? datePickerValue = DateTime.Now;
+	bool checkBoxValue;
+    string color = "rgb(68, 58, 110)";
+    bool colorPickerShowHSV = true;
+    bool colorPickerShowRGBA = true;
+    bool colorPickerShowColors = true;
+    bool colorPickerShowButton = false;
+
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+
+    void ColorPickerOnChange(string value)
+    {
+        Console.WriteLine($"Value changed to: {value}");
+    }
+}
