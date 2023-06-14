@@ -1,0 +1,68 @@
+﻿@page "/"
+
+<div class="container">
+    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+               Text="@($"Counter: {Counter}")"
+               Click="IncreaseCounter"
+               CssClass="w-100" />
+
+     <DxCheckBox CssClass="mb-1 col" @bind-Checked="IsCheckBoxChecked">Accept?</DxCheckBox>
+
+
+     <DxDateEdit @bind-Date="@DateTimeValue"
+                 CssClass="cw-320" />
+     <p class="demo-text cw-320 mt-2">
+         Date: <b>@DateTimeValue.ToString("dddd, dd MMMM yyyy")</b>
+     </p>
+
+    <div id="dropdown-overview-target-container">
+        <DxButton
+            Click="() => IsDropDownOpen = !IsDropDownOpen"
+            RenderStyle="ButtonRenderStyle.Secondary">SHOW A DROPDOWN</DxButton>
+    </div>
+    <DxDropDown
+        @bind-IsOpen="@IsDropDownOpen"
+        HeaderVisible="true"
+        HeaderText="Header"
+        BodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        PositionMode="DropDownPositionMode.Bottom"
+        Width="max(25vw, 250px)"
+        PositionTarget="#dropdown-overview-target-container"
+        RestrictionTarget="#Navigation-DropDown-Overview"
+        CloseMode="DropDownCloseMode.Close"
+        PreventCloseOnPositionTargetClick="true"
+       >
+    </DxDropDown>
+
+    <div class="target-container" @onclick="@(() => PopupVisible = true)">
+        <p class="target-caption">CLICK TO SHOW A POP-UP WINDOW</p>
+    </div>
+    <DxPopup
+        HeaderText="Header"
+        @bind-Visible="@PopupVisible"
+        BodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+       >
+    </DxPopup>
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int Counter { get; set; } = 0;
+    DateTime DateTimeValue { get; set; } = DateTime.Now;
+    bool IsDropDownOpen { get; set; } = false;
+    bool PopupVisible { get; set; } = false;
+    bool IsCheckBoxChecked { get; set; } = false;
+
+    void IncreaseCounter()
+    {
+        Counter++;
+    }
+}
