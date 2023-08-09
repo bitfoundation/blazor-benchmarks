@@ -9,9 +9,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AntDesign" Version="0.15.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.9" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
+		<PackageReference Include="AntDesign" Version="0.15.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.10" PrivateAssets="all" />
 	</ItemGroup>
 
 </Project>
