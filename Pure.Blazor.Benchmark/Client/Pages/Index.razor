@@ -1,0 +1,28 @@
+﻿@page "/"
+
+<div class="container">
+    <button @onclick="IncreaseCounter">@($"Counter: {counter}")</button>
+    
+    <input type="date" placeholder="Select a date"/>
+
+    <lable For="label-input">A Label for An Input</lable>
+    <input type="text" name="label-input" id="label-input" />
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int counter;
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+}
