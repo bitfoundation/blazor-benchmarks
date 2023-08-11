@@ -1,0 +1,39 @@
+﻿@page "/"
+
+<div class="container">
+    <MatButton @onclick="IncreaseCounter" Raised="true">Counter: @counter</MatButton>
+    <MatCheckbox @bind-Value="@checkBoxValue" Label="Click me"></MatCheckbox>
+    <MatDatePicker @bind-Value="@datePickerValue"></MatDatePicker>
+
+    <MatSelect Label="Pick a Food Group" @bind-Value="@selectValue">
+        <MatOption TValue="int" Value="0"></MatOption>
+        <MatOption TValue="int" Value="1">Bread, Cereal, Rice, and Pasta</MatOption>
+        <MatOption TValue="int" Value="2">Vegetables</MatOption>
+        <MatOption TValue="int" Value="3">Fruit</MatOption>
+    </MatSelect>
+
+    <h3 class="mat-subtitle1">Progress</h3>
+    <MatProgressBar Progress="0.6"></MatProgressBar>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    int counter;
+    bool checkBoxValue = true;
+    public DateTime? datePickerValue { get; set; } = DateTime.Now.AddDays(-10);
+    int selectValue;
+
+
+    void IncreaseCounter(MouseEventArgs e)
+    {
+        counter++;
+    }
+}
