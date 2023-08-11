@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\MatBlazor.Benchmark.Client.csproj" />
+    <ProjectReference Include="..\Client\Blazorise.Benchmark.Client.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,42 @@
+﻿@page "/"
+
+<div class="container">
+    <Button Color="Color.Primary" Clicked="@IncreaseCounter">@($"Counter: {counter}")</Button>
+
+        <Check TValue="bool">Check me out</Check>
+        <Addons>
+            <Addon AddonType="AddonType.Body">
+                <DatePicker @ref="@datePicker" TValue="DateTime?" />
+            </Addon>
+            <Addon AddonType="AddonType.End">
+                <Button Color="Color.Light" Clicked="@(()=>datePicker.ToggleAsync())">
+                    <Icon Name="IconName.CalendarDay" />
+                </Button>
+            </Addon>
+        </Addons>
+
+        <Text TextColor="TextColor.Primary">
+            Lorem ipsum dolor sit amet.
+        </Text>
+
+        <Progress Value="25" Animated Striped />
+ </div>
+
+ <style>
+     .container {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+         width: 300px;
+     }
+ </style>
+
+ @code {
+    int counter;
+    DatePicker<DateTime?> datePicker;
+
+    void IncreaseCounter()
+    {
+        counter++;
+    }
+}
