@@ -1,0 +1,40 @@
+﻿@page "/"
+
+<div class="container">
+    <SfButton IsPrimary="true" @onclick="IncreaseCounter">@($"Counter: {counter}")</SfButton>
+    <SfCheckBox @bind-Checked="@isChecked">Checkbox: @isChecked</SfCheckBox>
+    <SfDatePicker TValue="DateTime?" Placeholder="Choose a Date" ShowClearButton="true"></SfDatePicker>
+    <SfProgressBar @ref="linearInstance" Type="ProgressType.Linear" ID="LinearSegment"
+                   Height="30" Width="70%" SegmentCount="50" GapWidth="5"
+                   Value="@progressBarValue" Minimum="0" Maximum="100" CornerRadius="CornerType.Square"
+                   Theme="@currentTheme"
+                   TrackThickness="15"
+                   ProgressThickness="15"
+                   TrackColor="@progressBarColorTrack">
+        <ProgressBarAnimation Enable="true" Duration="2000" Delay="0"/>
+    </SfProgressBar>
+    <SfColorPicker></SfColorPicker>
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
+</style>
+
+@code {
+    private int counter;
+    private bool isChecked = true;
+    private SfProgressBar linearInstance;
+    private int progressBarValue { get; set; } = 100;
+    private Theme currentTheme = Theme.Bootstrap5;
+    private string progressBarColorTrack { get; set; } = null;
+
+    void IncreaseCounter(MouseEventArgs args)
+    {
+        counter++;
+    }
+}
