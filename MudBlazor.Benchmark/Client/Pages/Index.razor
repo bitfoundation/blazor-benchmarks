@@ -4,13 +4,10 @@
     <MudButton Variant="Variant.Filled" OnClick="IncreaseCounter">@($"Counter: {counter}")</MudButton>
 
     <MudDatePicker Style="max-width: 350px"
-                    AriaLabel="Select a date"
                     Placeholder="Select a date..." />
 
-    <MudProgressLinear Label="Progress"
-                       Value="30"
-                       Description="Example progress"
-                       BarHeight="20" />
+    <MudProgressLinear
+                       Value="30" />
 
     <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete"></MudIconButton>
 
