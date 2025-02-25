@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantTimezone>true</InvariantTimezone>
+		<InvariantGlobalization>true</InvariantGlobalization>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="LumexUI" Version="1.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.2" PrivateAssets="all" />
+	</ItemGroup>
+
+	<Target Name="InstallTailwind" AfterTargets="PostBuildEvent" Condition="!Exists('tailwindcss.exe')">
+		<Exec Command="curl -LO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-windows-x64.exe" />
+		<Exec Command="ren tailwindcss-windows-x64.exe tailwindcss.exe" />
+	</Target>
+
+	<Target Name="RunTailwind" AfterTargets="InstallTailwind">
+		<Exec Command="tailwindcss -i ./wwwroot/globals.css -o ./wwwroot/app.min.css --minify" />
+	</Target>
+
+</Project>
