@@ -17,6 +17,7 @@ The table below provides an overview of the file sizes of various popular Blazor
 | [**bit BlazorUI**](https://blazorui.bitplatform.dev/)			  | 1.7 MB    | +0.2 MB  |
 | [**MudBlazor**](https://mudblazor.com/)                         | 2.0 MB    | +0.5 MB  |
 | [**MatBlazor**](https://matblazor.com/)						  | 2.1 MB    | +0.6 MB  |
+| [**LumexUI**](https://lumexui.org/)							  | 2.5 MB    | +1.0 MB  |
 | [**Blazorise**](https://blazorise.com/)                         | 3.1 MB    | +1.6 MB  |
 | [**Ant Design**](https://antblazor.com/)                        | 3.6 MB    | +2.1 MB  |
 | [**Syncfusion**](https://syncfusion.com/blazor-components/)	  | 4.3 MB    | +2.8 MB  |
