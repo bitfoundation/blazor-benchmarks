@@ -1,7 +1,7 @@
 ﻿@page "/"
 
 <div class="container">
-    <Button OnClick="IncreaseCounter" Type="primary">@($"Counter: {counter}")</Button>
+    <Button OnClick="IncreaseCounter" Type="ButtonType.Primary">@($"Counter: {counter}")</Button>
 
     <Checkbox @bind-Checked="checkBoxIsChecked" Disabled="@checkBoxDisabled">
             @($"{(checkBoxIsChecked ? "Check" : "Uncheck")}-{(checkBoxDisabled ? "Disable" : "Enable")}")

@@ -4,9 +4,8 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantTimezone>true</InvariantTimezone>
 		<InvariantGlobalization>true</InvariantGlobalization>
-		<BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
-		<BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
 	</PropertyGroup>
 
 	<ItemGroup>

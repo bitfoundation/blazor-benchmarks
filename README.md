@@ -3,23 +3,31 @@
 
 # Blazor UI Libraries: A Comparative Analysis
 
-Blazor is revolutionizing the way web applications are built. With a myriad of UI libraries available, developers often find themselves in a dilemma about which one to choose. One of the factors that play a crucial role in this decision is the file size of the libraries. A smaller file size ensures faster load times, offering a better user experience.
+With numerous BlazorUI libraries available, developers often struggle to choose the right one.
+
+One crucial factor in this decision is file size. A smaller file size not only reduces the initial download time but also speeds up the initialization process every time the app starts.
+
+This is particularly important for low- and mid-end mobile devices, where limited CPU power and bandwidth can significantly impact performance.
 
 The table below provides an overview of the file sizes of various popular Blazor UI libraries:
 
-| Library                                                         | File Size |
-|-----------------------------------------------------------------|-----------|
-| **Blazor only**                                                 | 1.1 MB    |
-| [**bit BlazorUI**](https://components.bitplatform.dev/)                                            | 1.3 MB    |
-| [**MudBlazor**](https://mudblazor.com/)                         | 1.6 MB    |
-| [**MatBlazor**](https://www.matblazor.com/)                     | 2.3 MB    |
-| [**Radzen**](https://blazor.radzen.com/)                        | 2.7 MB    |
-| [**Blazorise**](https://blazorise.com/)                         | 2.9 MB    |
-| [**Ant Design**](https://antblazor.com/)                        | 3.2 MB    |
-| [**Telerik**](https://www.telerik.com/blazor-ui/)               | 4.4 MB    |
-| [**Syncfusion**](https://www.syncfusion.com/blazor-components/) | 4.8 MB    |
-| [**DevExpress**](https://www.devexpress.com/blazor/)                                              | 12.8 MB   |
+| Library                                                         | File Size | Diff     |
+|-----------------------------------------------------------------|-----------|----------|
+| **Blazor only**                                                 | 1.5 MB    | N/A	     |
+| [**bit BlazorUI**](https://blazorui.bitplatform.dev/)			  | 1.7 MB    | +0.2 MB  |
+| [**MudBlazor**](https://mudblazor.com/)                         | 2.0 MB    | +0.5 MB  |
+| [**MatBlazor**](https://matblazor.com/)						  | 2.1 MB    | +0.6 MB  |
+| [**Blazorise**](https://blazorise.com/)                         | 3.2 MB    | +1.7 MB  |
+| [**Ant Design**](https://antblazor.com/)                        | 3.6 MB    | +2.1 MB  |
+| [**Syncfusion**](https://syncfusion.com/blazor-components/)	  | 4.3 MB    | +2.8 MB  |
+| [**Telerik**](https://telerik.com/blazor-ui/)					  | 7.7 MB    | +6.2 MB  |
+| [**Radzen**](https://blazor.radzen.com/)                        | 9.1 MB    | +7.6 MB  |
+| [**DevExpress**](https://devexpress.com/blazor/)				  | 13.5 MB   | +12.0 MB |
 
-The comparison above is based on the DLL, JS, and CSS files required to utilize five components from each of the mentioned libraries. While file size is just one of the many criteria to consider when choosing a UI library, it's imperative to understand its impact on the application's performance and user experience.
+The comparison above is based on the WASM, JS, and CSS files required to utilize **5 components** from each of the mentioned libraries.
 
 ---
+
+If a page with 5 components takes up 1.7MB, it doesn't mean a fully built website will scale linearly to 5MB!
+For instance, the https://bitplatform.dev website, which includes over 40 pages, numerous components, and both dark and light themes,
+is only 2.5MB. While the runtime and libraries contribute to the initial download size, adding more pages to the project doesn’t significantly increase the overall file size.
