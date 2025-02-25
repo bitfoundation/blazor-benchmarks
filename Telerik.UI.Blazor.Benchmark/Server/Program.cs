@@ -35,7 +35,7 @@ if (app.Environment.IsProduction() || true)
     app.UseResponseCompression();
 }
 app.UseBlazorFrameworkFiles();
-app.UseStaticFiles();
+app.MapStaticAssets();
 
 app.UseRouting();
 
