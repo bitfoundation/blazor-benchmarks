@@ -30,4 +30,4 @@ The comparison above is based on the WASM, JS, and CSS files required to utilize
 
 If a page with 5 components takes up 1.7MB, it doesn't mean a fully built website will scale linearly to 5MB!
 For instance, the https://bitplatform.dev website, which includes over 40 pages, numerous components, and both dark and light themes,
-is only 2.5MB. While the runtime and libraries contribute to the initial download size, adding more pages to the project doesn’t significantly increase the overall file size.
+is only 2.5MB. While the runtime and libraries contribute to the initial download size, adding more pages to the project doesn’t significantly increase the overall web app size.
