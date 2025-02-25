@@ -17,7 +17,7 @@ The table below provides an overview of the file sizes of various popular Blazor
 | [**bit BlazorUI**](https://blazorui.bitplatform.dev/)			  | 1.7 MB    | +0.2 MB  |
 | [**MudBlazor**](https://mudblazor.com/)                         | 2.0 MB    | +0.5 MB  |
 | [**MatBlazor**](https://matblazor.com/)						  | 2.1 MB    | +0.6 MB  |
-| [**Blazorise**](https://blazorise.com/)                         | 3.2 MB    | +1.7 MB  |
+| [**Blazorise**](https://blazorise.com/)                         | 3.1 MB    | +1.6 MB  |
 | [**Ant Design**](https://antblazor.com/)                        | 3.6 MB    | +2.1 MB  |
 | [**Syncfusion**](https://syncfusion.com/blazor-components/)	  | 4.3 MB    | +2.8 MB  |
 | [**Telerik**](https://telerik.com/blazor-ui/)					  | 7.7 MB    | +6.2 MB  |
@@ -30,4 +30,4 @@ The comparison above is based on the WASM, JS, and CSS files required to utilize
 
 If a page with 5 components takes up 1.7MB, it doesn't mean a fully built website will scale linearly to 5MB!
 For instance, the https://bitplatform.dev website, which includes over 40 pages, numerous components, and both dark and light themes,
-is only 2.5MB. While the runtime and libraries contribute to the initial download size, adding more pages to the project doesn’t significantly increase the overall web app size.
+is only 2.5MB. While the runtime and libraries contribute to the initial download size, adding more pages to the project doesnâ€™t significantly increase the overall web app size.
